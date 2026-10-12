@@ -18,6 +18,7 @@ const DEFAULT_MENU_ITEMS = [
     category: 'Snacks',
     description: 'Crispy herb patty with lettuce, tomatoes, and secret mayo',
     price: 60.00,
+    available: true,
     isAvailable: true,
     imageUrl: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=80'
   },
@@ -27,6 +28,7 @@ const DEFAULT_MENU_ITEMS = [
     category: 'Snacks',
     description: 'Golden toasted butter bread loaded with gooey cheddar cheese',
     price: 50.00,
+    available: true,
     isAvailable: true,
     imageUrl: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&q=80'
   },
@@ -36,6 +38,7 @@ const DEFAULT_MENU_ITEMS = [
     category: 'Snacks',
     description: 'Crispy flaky crust with spiced potato-pea filling & mint chutney',
     price: 25.00,
+    available: true,
     isAvailable: true,
     imageUrl: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&q=80'
   },
@@ -45,6 +48,7 @@ const DEFAULT_MENU_ITEMS = [
     category: 'Snacks',
     description: 'Charcoal grilled paneer cubes wrapped in layered paratha with onions',
     price: 75.00,
+    available: true,
     isAvailable: true,
     imageUrl: 'https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=400&q=80'
   },
@@ -54,6 +58,7 @@ const DEFAULT_MENU_ITEMS = [
     category: 'Lunch',
     description: 'Wok-tossed basmati rice served with savory veggie dumplings in gravy',
     price: 90.00,
+    available: true,
     isAvailable: true,
     imageUrl: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=400&q=80'
   },
@@ -63,6 +68,7 @@ const DEFAULT_MENU_ITEMS = [
     category: 'Lunch',
     description: 'Rich butter gravy paneer, 2 butter rotis, jeera rice, salad & dal',
     price: 110.00,
+    available: true,
     isAvailable: true,
     imageUrl: 'https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&q=80'
   },
@@ -72,6 +78,7 @@ const DEFAULT_MENU_ITEMS = [
     category: 'Breakfast',
     description: 'Crispy fermented crepe filled with spiced potatoes & coconut chutney',
     price: 50.00,
+    available: true,
     isAvailable: true,
     imageUrl: 'https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=400&q=80'
   },
@@ -81,6 +88,7 @@ const DEFAULT_MENU_ITEMS = [
     category: 'Breakfast',
     description: '2 steamed rice cakes & 1 crispy lentil donut with piping hot sambar',
     price: 40.00,
+    available: true,
     isAvailable: true,
     imageUrl: 'https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=400&q=80'
   },
@@ -90,6 +98,7 @@ const DEFAULT_MENU_ITEMS = [
     category: 'Beverages',
     description: 'Creamy blended espresso milkshake topped with chocolate drizzle',
     price: 45.00,
+    available: true,
     isAvailable: true,
     imageUrl: 'https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=400&q=80'
   },
@@ -99,6 +108,7 @@ const DEFAULT_MENU_ITEMS = [
     category: 'Beverages',
     description: 'Brewed black tea infused with fresh crushed ginger and cardamom',
     price: 15.00,
+    available: true,
     isAvailable: true,
     imageUrl: 'https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=400&q=80'
   }

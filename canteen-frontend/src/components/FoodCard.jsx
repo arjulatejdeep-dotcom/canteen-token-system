@@ -2,9 +2,11 @@ import React from 'react';
 import { Plus, Check } from 'lucide-react';
 
 export default function FoodCard({ item, onAddToCart, isInCart }) {
+  const isAvailable = item.available !== undefined ? item.available : (item.isAvailable !== undefined ? item.isAvailable : true);
+
   return (
     <div className={`bg-white rounded-2xl border transition-all duration-200 overflow-hidden flex flex-col ${
-      !item.available ? 'opacity-60 border-slate-200' : 'border-slate-200 hover:shadow-md hover:border-slate-300'
+      !isAvailable ? 'opacity-60 border-slate-200' : 'border-slate-200 hover:shadow-md hover:border-slate-300'
     }`}>
       
       <div className="relative h-44 w-full bg-slate-100 overflow-hidden">
@@ -21,7 +23,7 @@ export default function FoodCard({ item, onAddToCart, isInCart }) {
         <span className="absolute top-3 left-3 bg-white/90 backdrop-blur-xs text-slate-800 text-xs font-bold px-2.5 py-1 rounded-lg shadow-xs">
           {item.category}
         </span>
-        {!item.available && (
+        {!isAvailable && (
           <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center">
             <span className="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
               Sold Out
@@ -44,9 +46,9 @@ export default function FoodCard({ item, onAddToCart, isInCart }) {
 
           <button
             onClick={() => onAddToCart(item)}
-            disabled={!item.available}
+            disabled={!isAvailable}
             className={`flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold transition cursor-pointer ${
-              !item.available
+              !isAvailable
                 ? 'bg-slate-100 text-slate-400 cursor-not-allowed'
                 : isInCart
                 ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
