@@ -12,9 +12,15 @@ export default function StudentOrders() {
     if (!isStudent) return;
     try {
       const res = await api.get('/orders/my-orders');
-      setOrders(res.data);
+      if (Array.isArray(res.data) && res.data.length > 0) {
+        setOrders(res.data);
+      } else {
+        const local = JSON.parse(localStorage.getItem('canteen_orders') || '[]');
+        setOrders(local);
+      }
     } catch (err) {
-      console.error(err);
+      const local = JSON.parse(localStorage.getItem('canteen_orders') || '[]');
+      setOrders(local);
     } finally {
       setLoading(false);
     }

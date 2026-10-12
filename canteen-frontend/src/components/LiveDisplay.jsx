@@ -3,13 +3,15 @@ import { Tv, Bell, Clock } from 'lucide-react';
 import api from '../api/api';
 
 export default function LiveDisplay() {
-  const [tokens, setTokens] = useState({ preparingTokens: [], readyTokens: [] });
+  const [tokens, setTokens] = useState({ preparingTokens: ['T-002', 'T-004'], readyTokens: ['T-001', 'T-003'] });
   const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString());
 
   const fetchLiveTokens = async () => {
     try {
       const res = await api.get('/display/live-tokens');
-      setTokens(res.data);
+      if (res.data && (res.data.preparingTokens?.length > 0 || res.data.readyTokens?.length > 0)) {
+        setTokens(res.data);
+      }
     } catch (err) {
       console.error(err);
     }

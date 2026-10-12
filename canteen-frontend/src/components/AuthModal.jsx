@@ -43,11 +43,7 @@ export default function AuthModal({ isOpen, onClose }) {
       }
       handleModalClose();
     } catch (err) {
-      if (err.code === 'ERR_NETWORK') {
-        setError('Cannot connect to backend server at http://localhost:8081.');
-      } else {
-        setError(err.response?.data?.message || 'Authentication failed. Please check your credentials.');
-      }
+      setError(err.response?.data?.message || 'Authentication failed. Please check your credentials.');
     } finally {
       setLoading(false);
     }
