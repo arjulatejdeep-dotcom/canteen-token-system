@@ -1,0 +1,429 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project Abstract - Smart Campus Canteen System</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+    @page {
+      size: A4;
+      margin: 14mm 16mm;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #1e293b;
+      background-color: #ffffff;
+      line-height: 1.5;
+      font-size: 13px;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    .header {
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 14px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .badge-category {
+      display: inline-block;
+      background: #eff6ff;
+      color: #2563eb;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-bottom: 6px;
+      border: 1px solid #bfdbfe;
+    }
+
+    h1 {
+      font-size: 20px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.4px;
+      line-height: 1.25;
+      margin-bottom: 4px;
+    }
+
+    .subtitle {
+      font-size: 12px;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    .doc-meta {
+      text-align: right;
+      font-size: 11px;
+      color: #64748b;
+    }
+
+    .doc-meta strong {
+      color: #0f172a;
+    }
+
+    /* Abstract Highlight Box */
+    .abstract-box {
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      border-left: 4px solid #2563eb;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+
+    .abstract-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+      color: #1e40af;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .abstract-text {
+      font-size: 12.5px;
+      color: #334155;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    .abstract-text strong {
+      color: #0f172a;
+    }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: #0f172a;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      border-bottom: 1px solid #f1f5f9;
+      padding-bottom: 4px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 10px 12px;
+    }
+
+    .card-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+
+    .card-content {
+      font-size: 11.5px;
+      color: #475569;
+      line-height: 1.45;
+    }
+
+    .features-list {
+      list-style: none;
+      margin-top: 4px;
+    }
+
+    .features-list li {
+      position: relative;
+      padding-left: 14px;
+      margin-bottom: 4px;
+      font-size: 11.5px;
+      color: #334155;
+    }
+
+    .features-list li::before {
+      content: "•";
+      position: absolute;
+      left: 2px;
+      color: #2563eb;
+      font-weight: bold;
+    }
+
+    /* Stack Table */
+    .stack-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 6px;
+      font-size: 11.5px;
+    }
+
+    .stack-table th, .stack-table td {
+      border: 1px solid #e2e8f0;
+      padding: 6px 10px;
+      text-align: left;
+    }
+
+    .stack-table th {
+      background-color: #f8fafc;
+      font-weight: 700;
+      color: #334155;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #f1f5f9;
+      color: #334155;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid #e2e8f0;
+      margin: 1px 2px;
+    }
+
+    .workflow-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 10px 14px;
+      margin-bottom: 14px;
+    }
+
+    .workflow-step {
+      text-align: center;
+      flex: 1;
+    }
+
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      background: #2563eb;
+      color: #ffffff;
+      border-radius: 50%;
+      font-size: 10px;
+      font-weight: bold;
+      margin-bottom: 3px;
+    }
+
+    .step-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: #1e293b;
+    }
+
+    .step-sub {
+      font-size: 9.5px;
+      color: #64748b;
+    }
+
+    .workflow-arrow {
+      color: #94a3b8;
+      font-size: 14px;
+      font-weight: bold;
+      padding: 0 4px;
+    }
+
+    .footer {
+      border-top: 1px solid #e2e8f0;
+      margin-top: 14px;
+      padding-top: 8px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div>
+      <span class="badge-category">Full-Stack Web Engineering Project</span>
+      <h1>Smart Campus Canteen Pre-Ordering & Live Token System</h1>
+      <p class="subtitle">A decoupled Web Platform bridging student pre-orders with live kitchen fulfillment</p>
+    </div>
+    <div class="doc-meta">
+      <div><strong>Target Stack:</strong> React + Spring Boot</div>
+      <div><strong>Architecture:</strong> Client-Server REST</div>
+      <div><strong>Status:</strong> Project Proposal / Abstract</div>
+    </div>
+  </div>
+
+  <!-- Abstract Box -->
+  <div class="abstract-box">
+    <div class="abstract-title">
+      Executive Project Abstract
+    </div>
+    <p class="abstract-text">
+      The <strong>Smart Campus Canteen Pre-Ordering & Live Token System</strong> eliminates long lunch queues and chaotic food counters in college campuses through an intuitive full-stack web application. Built with <strong>React</strong> and <strong>Spring Boot (Java)</strong>, the platform enables students to pre-order meals from dynamic menus and receive instant digital tokens for scheduled pickups. Canteen staff manage incoming orders through a real-time kitchen queue, while a public TV display board flashes ready tokens for hassle-free collection. Secured with <strong>JWT authentication</strong> and powered by <strong>Spring Data JPA</strong>, this project modernizes campus dining into a fast, transparent, and completely queue-free experience.
+    </p>
+  </div>
+
+  <!-- Operational Flow / Architecture -->
+  <div class="section-title">Core System Lifecycle</div>
+  <div class="workflow-bar">
+    <div class="workflow-step">
+      <div class="step-number">1</div>
+      <div class="step-label">Select & Pre-Order</div>
+      <div class="step-sub">Browse menu & cart</div>
+    </div>
+    <div class="workflow-arrow">➔</div>
+    <div class="workflow-step">
+      <div class="step-number">2</div>
+      <div class="step-label">Token Generation</div>
+      <div class="step-sub">Unique ID & pickup slot</div>
+    </div>
+    <div class="workflow-arrow">➔</div>
+    <div class="workflow-step">
+      <div class="step-number">3</div>
+      <div class="step-label">Kitchen Preparation</div>
+      <div class="step-sub">Staff transitions status</div>
+    </div>
+    <div class="workflow-arrow">➔</div>
+    <div class="workflow-step">
+      <div class="step-number">4</div>
+      <div class="step-label">Live Display Alert</div>
+      <div class="step-sub">Screen displays token</div>
+    </div>
+    <div class="workflow-arrow">➔</div>
+    <div class="workflow-step">
+      <div class="step-number">5</div>
+      <div class="step-label">Counter Pickup</div>
+      <div class="step-sub">Contactless handoff</div>
+    </div>
+  </div>
+
+  <!-- Key Modules Grid -->
+  <div class="section-title">Key Modules & Capabilities</div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">1. Student Portal (React)</div>
+      <ul class="features-list">
+        <li>Categorized digital menu (Breakfast, Lunch, Snacks, Drinks).</li>
+        <li>Dynamic cart with quantity controls and instant bill calculation.</li>
+        <li>Time-slot selection to align order pickup with class breaks.</li>
+        <li>Personal order history with real-time state pill updates.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title">2. Canteen Staff Operations (Spring Boot + React)</div>
+      <ul class="features-list">
+        <li>Live incoming order board sorted chronologically by pickup time.</li>
+        <li>One-touch lifecycle transitions: Placed ➔ Preparing ➔ Ready.</li>
+        <li>Real-time item availability toggle (Mark "Sold Out" instantly).</li>
+        <li>Daily sales tally and order quantity summary.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title">3. Public Live Token Display Screen</div>
+      <ul class="features-list">
+        <li>Full-screen TV dashboard for high-visibility dining hall mounting.</li>
+        <li>Divided status columns: Now Preparing vs Ready for Pickup.</li>
+        <li>High-contrast visual indicators allowing instant token identification.</li>
+        <li>Eliminates physical counter crowds and verbal order callouts.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="card-title">4. Security & Data Management</div>
+      <ul class="features-list">
+        <li>Stateless authentication using JSON Web Tokens (JWT).</li>
+        <li>Role-Based Access Control: ROLE_STUDENT & ROLE_CANTEEN_STAFF.</li>
+        <li>Relational database mapping for Orders, OrderItems, and Users.</li>
+        <li>Database constraints to eliminate duplicate tokens and race conditions.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Tech Stack Table -->
+  <div class="section-title">Technology Specifications</div>
+  <table class="stack-table">
+    <thead>
+      <tr>
+        <th style="width: 25%;">Layer</th>
+        <th style="width: 35%;">Technologies</th>
+        <th style="width: 40%;">Core Purpose</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Frontend</strong></td>
+        <td>
+          <span class="tag">React 18+</span>
+          <span class="tag">Vite</span>
+          <span class="tag">Tailwind CSS</span>
+          <span class="tag">Axios</span>
+        </td>
+        <td>Responsive client UI, rapid cart state, and dynamic status display.</td>
+      </tr>
+      <tr>
+        <td><strong>Backend</strong></td>
+        <td>
+          <span class="tag">Java 17/21</span>
+          <span class="tag">Spring Boot 3</span>
+          <span class="tag">Spring Security</span>
+        </td>
+        <td>RESTful API routing, business rules, token generation, and security.</td>
+      </tr>
+      <tr>
+        <td><strong>Persistence</strong></td>
+        <td>
+          <span class="tag">Spring Data JPA</span>
+          <span class="tag">Hibernate</span>
+          <span class="tag">MySQL / PostgreSQL</span>
+        </td>
+        <td>Object-relational mapping, transactional integrity, and data indexing.</td>
+      </tr>
+      <tr>
+        <td><strong>Security</strong></td>
+        <td>
+          <span class="tag">JWT</span>
+          <span class="tag">BCrypt</span>
+          <span class="tag">RBAC</span>
+        </td>
+        <td>Password encryption, token-based authorization, and protected endpoints.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div>Smart Campus Canteen Project &bull; College Full-Stack Engineering</div>
+    <div>Generated for Project Synopsis & Presentation Review</div>
+  </div>
+
+</body>
+</html>
